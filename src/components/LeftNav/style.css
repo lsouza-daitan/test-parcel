@@ -1,0 +1,13 @@
+.leftnav {
+    grid-area: leftNav;
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: var(--nav-background);
+    color: white;
+    height: 100%;
+    transition: width 0.35s ease-out;
+}
+
+.layout.slim .leftnav {
+    width: 64px !important;
+}

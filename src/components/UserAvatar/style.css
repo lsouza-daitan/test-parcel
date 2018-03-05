@@ -1,0 +1,9 @@
+.user-avatar {
+    overflow: hidden;
+    width: 48px;
+    height: auto;
+}
+
+.user-avatar.round {
+    border-radius: 50%;
+}

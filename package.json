@@ -1,0 +1,32 @@
+{
+  "name": "test-parcel",
+  "version": "1.0.0",
+  "description": "Just a test for parcel",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "alias": {
+    "styles": "~/src/styles"
+  },
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "eslint": "^4.18.1",
+    "faker": "^4.1.0",
+    "prop-types": "^15.6.1",
+    "q": "^1.5.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "underscore": "^1.8.3",
+    "xregexp": "^4.1.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.7.2",
+    "parcel-bundler": "^1.6.2",
+    "react-hot-loader": "^4.0.0"
+  }
+}

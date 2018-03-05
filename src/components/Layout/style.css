@@ -1,0 +1,11 @@
+.layout {
+    display: grid;
+    grid-gap: 0;
+    grid-template-rows: 64px auto;
+    grid-template-columns: min-content 2px auto;
+    grid-template-areas: 
+        "leftNav resizer header"
+        "leftNav resizer workspace";
+    width: 100vw;
+    height: 100vh;
+}

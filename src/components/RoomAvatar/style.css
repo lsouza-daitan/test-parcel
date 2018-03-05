@@ -1,0 +1,43 @@
+.room-avatar {
+    --size: 40px;
+    width: var(--size);
+    height: var(--size);
+    cursor: default;
+}
+
+.room-avatar__background {
+    position: absolute;
+    background-color: var(--accent-color);
+    width: var(--size);
+    height: var(--size);
+}
+
+.room-avatar__tag {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+    letter-spacing: 0.15rem;
+    text-indent: 0.15rem;
+    width: var(--size);
+    height: var(--size);
+    z-index: 1;
+}
+
+.room-avatar.circle .room-avatar__background {
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.room-avatar.hexagon .room-avatar__background {
+    background-color: transparent;
+}
+
+.room-avatar.hexagon .room-avatar__background::before {
+    content: '\2B22';
+    color: var(--accent-color);
+    font-size: calc(var(--size) * 1.25);
+    line-height: calc(var(--size) * 0.9);
+}

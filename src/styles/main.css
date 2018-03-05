@@ -1,0 +1,21 @@
+html {
+    --background: #F2F2F2;
+    --header-background: #FDFDFD;
+    --nav-background: #253238;
+    --accent-color: #00a4b1;
+    --text: #000000;
+    --font-size: 14px;
+    font-size: var(--font-size);
+    font-family: "Lato", system-ui, sans-serif;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}

@@ -1,0 +1,53 @@
+.current-user {
+    flex: 0 0 auto;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    padding: 12px;
+    height: 64px;
+}
+
+.current-user__avatar {
+    flex: 0 0 auto;
+}
+
+.current-user__avatar img {
+    width: 40px;
+}
+
+.current-user__split {
+    flex: 0 0 auto;
+    width: 8px;
+}
+
+.current-user__info {
+    flex: 1 1 auto;
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 100%;
+    opacity: 1.0;
+    transition: opacity 0.35s ease-out;
+    will-change: opacity;
+}
+
+.current-user__name {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.current-user__presence {
+    opacity: 0.6;
+    font-size: 0.8rem;
+    cursor: default;
+}
+
+.current-user__presence::before {
+    content: '';
+    display: block;
+    height: 4px;
+}
+
+.layout.slim .current-user__info {
+    opacity: 0.0;
+    max-width: 0px;
+}

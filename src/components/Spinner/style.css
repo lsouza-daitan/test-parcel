@@ -1,0 +1,37 @@
+.spinner {
+    --color-main: #99AAEEFF;
+    --color-sub: #99AAEE55;
+    --size: 24px;
+    animation: anim-spinner 1s infinite linear;
+    border: calc(var(--size) / 4) solid var(--color-sub);
+    border-top: calc(var(--size) / 4) solid var(--color-main);
+    border-radius: 50%;
+    transform: translateZ(0);
+    width: var(--size);
+    height: var(--size);
+}
+
+.spinner.centered {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: calc(-.5 * var(--size));
+    margin-top: calc(-.5 * var(--size));
+}
+
+.spinner.small {
+    --size: 12px;
+}
+
+.spinner.large {
+    --size: 32px;
+}
+
+@keyframes anim-spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
