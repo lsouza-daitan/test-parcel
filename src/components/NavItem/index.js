@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import NavAvatar from '../NavAvatar';
-import style from './style.css';
+import './style.css';
 
 const propTypes = {
     thread: PropTypes.object.isRequired,

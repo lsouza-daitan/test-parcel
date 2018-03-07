@@ -2,7 +2,7 @@ import React from 'react';
 import classNames from 'classnames';
 import RoomAvatar from '../RoomAvatar';
 import UserAvatar from '../UserAvatar';
-import style from './style.css';
+import './style.css';
 
 const NavAvatar = (props) => {
     const { thread } = props;

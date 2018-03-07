@@ -3,7 +3,8 @@ import classNames from 'classnames';
 import Q from 'q';
 import _ from 'underscore';
 import context from './context';
-import style from './style.css';
+import './style.css';
+import ErrorReport from '../ErrorReport';
 import Spinner from '../Spinner';
 
 // Async loading
@@ -15,6 +16,8 @@ class Layout extends React.PureComponent {
         super(props);
 
         this.state = {
+            error: null,
+            errorStack: null,
             loading: true,
             leftNavWidth: 280,
             slim: false,
@@ -24,6 +27,7 @@ class Layout extends React.PureComponent {
     }
 
     render() {
+        if (this.state.error) return this.renderError();
         if (this.state.loading) return this.renderLoading();
 
         const { leftNavWidth } = this.state;
@@ -40,6 +44,11 @@ class Layout extends React.PureComponent {
         );
     }
 
+    renderError() {
+        const { error, errorStack } = this.state;
+        return ErrorReport({ error, errorStack });
+    }
+
     renderLoading() {
         return Spinner({ size: 'large', centered: true });
     }
@@ -52,6 +61,10 @@ class Layout extends React.PureComponent {
 
     componentWillUnmount() {
         window.removeEventListener('resize', this.checkSlimThrottled);
+    }
+
+    componentDidCatch(error, info) {
+        this.setState({ error, errorStack: info.componentStack });
     }
 
     checkSlim() {

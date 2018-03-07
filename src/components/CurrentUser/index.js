@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import faker from 'faker';
-import style from './style.css';
+import './style.css';
 import UserAvatar from '../UserAvatar';
 import RoomAvatar from '../RoomAvatar';
 

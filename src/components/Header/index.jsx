@@ -1,10 +1,12 @@
 import React from 'react';
-import style from './style.css';
+import SearchBar from "../SearchBar";
+import './style.css';
 
 class Header extends React.PureComponent {
     render() {
         return (
             <nav id='header'>
+                <SearchBar />
             </nav>
         );
     }

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import style from './style.css';
+import './style.css';
 import CurrentUser from '../CurrentUser';
 import NavThreads from '../NavThreads';
 

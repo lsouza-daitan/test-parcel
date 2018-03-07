@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import XRegExp from 'xregexp';
-import style from './style.css';
+import './style.css';
 
 const TAG_SEPARATOR = XRegExp('[\\p{P}\\p{Z}]');
 
